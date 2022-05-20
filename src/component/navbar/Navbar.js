@@ -36,16 +36,17 @@ export default function Navbar({ setName, name }) {
             xs={4}
             bgcolor={
               !(
-                currentURL !==
-                ("http://localhost:3000" ||
-                  "https://miniproject-igustimadesintawidyaningrat.netlify.app") +
-                  "/"
+                currentURL !== "http://localhost:3000/" ||
+                "https://miniproject-igustimadesintawidyaningrat.netlify.app/"
               )
                 ? "#E3E3E3"
                 : "#FFFFFFF"
             }
           >
-            {!(currentURL !== "http://localhost:3000/") && (
+            {!(
+              currentURL !== "http://localhost:3000/" ||
+              "https://miniproject-igustimadesintawidyaningrat.netlify.app/"
+            ) && (
               <>
                 <IconButton
                   type="submit"
